@@ -70,9 +70,13 @@ class Game {
         cars[index-1].y = y;
 
         if (index === player.index){
-          cars[index - 1].shapeColor = "red";
+          stroke(10);
+         fill("red");
+         ellipse(x,y,60, 60);
+         cars[index - 1].shapeColor = "red";
           camera.position.x = displayWidth/2;
           camera.position.y = cars[index-1].y;
+        
         }
        
         //textSize(15);
@@ -86,7 +90,7 @@ class Game {
       player.update();
     }
 
-    if(player.distance > 3860){
+    if(player.distance > 4400){
       gameState = 2;
     }
    
